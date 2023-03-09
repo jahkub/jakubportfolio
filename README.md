@@ -11,3 +11,45 @@ Portfolion kommer innehålla mina senaste skolarbeten som jag är nöjd med men 
 ## moment som ska hända under detta projektet:
 - skiss, innuti figma
 - koda koda koda
+
+#### vecka 10
+
+- skissarbete i figma (levande skiss, skissar under tiden jag kodar.)
+- påbörja med navbar.
+
+#### vecka 11
+
+- göra klart fungerande, responsiv navbar
+- footer
+
+#### vecka 12
+
+- fixa "cards" för mina projekt, också responsiv layout på de.
+
+#### vecka 13
+
+- fixa en modal som visar upp personliga projekt med en carosel som visar bilder. med en discription. (kommer behöva js, därför vågar jag inte sätta hur mycket lektioner detta kommer behöva.)
+
+#### vecka 14
+
+
+
+#### vecka 15
+
+- påsklov
+
+#### vecka 16
+
+
+
+#### vecka 17
+
+
+
+#### vecka 18
+
+
+
+#### vecka 19
+
+- Redovisning
