@@ -25,7 +25,7 @@ window.onscroll = function() {invisNav(width)}
 var width = window.matchMedia("(min-width: 768px)")
 function invisNav(width) {
     if (width.matches) {
-        if (document.body.scrollTop > 850 || document.documentElement.scrollTop > 850) { {
+        if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) { {
         navbar.classList.add("visable")
             console.log('we adding')
     } } 
@@ -35,7 +35,7 @@ function invisNav(width) {
     }
     }   
 
-    if (document.body.scrollTop > 850 || document.documentElement.scrollTop > 850) {
+    if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
     for (let i = 0; i < lines.length; i++) { 
         lines[i].classList.add('lineOpacity')
     }     }
