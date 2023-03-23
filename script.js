@@ -16,9 +16,6 @@ function burgerOpen() {
 
 }
 
-
-
-
 window.onscroll = function() {invisNav(width)}
 
 
@@ -45,3 +42,50 @@ function invisNav(width) {
     }
     }
 }
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("slide");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+
+    slides[slideIndex-1].style.display = "block";  
+    }
+
+
+    let modal = document.querySelector(".modal");
+    let cardo = document.querySelector(".open1");
+    let closer = document.querySelector(".close");
+
+
+    cardo.addEventListener('click', openModal)
+    closer.addEventListener('click', closeModal)
+
+
+    function openModal() {
+        console.log('we openin')
+        modal.classList.add('modalmodal')
+    }
+    function closeModal() {
+        console.log('we closin')
+        modal.classList.remove('modalmodal')
+    }
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.classList.remove('modalmodal')
+        }
+    }
