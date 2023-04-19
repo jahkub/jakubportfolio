@@ -172,15 +172,19 @@ h2 {
     margin: 50px;
 }
 .hellotitle {
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 .cv {
-    border: crimson 2px solid;
     display: flex;
     justify-content: space-evenly;
+    flex-direction: column;
+    height: 100vh;
 }
 
+.column {
+    width: 25%;
+}
 
 #footer {
     background-color: rgb(50, 42, 58);
@@ -317,5 +321,9 @@ p {
     }
     .mecard {
         flex-direction: row;
+    }
+    .cv {
+        flex-direction: row;
+        height: 30vh;
     }
 }
