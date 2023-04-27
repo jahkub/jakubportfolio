@@ -67,25 +67,116 @@ function showSlides(n) {
     }
 
 
-    let modal = document.querySelector(".modal");
-    let cardo = document.querySelector(".open1");
+    /*let modal = document.querySelectorAll(".modal");
+    let card1 = document.querySelector(".open1");
+    let card2 = document.querySelector('.open2')
     let closer = document.querySelector(".close");
+    let card = document.querySelectorAll('.card')
 
 
-    cardo.addEventListener('click', openModal)
-    closer.addEventListener('click', closeModal)
 
 
+for (let z = 0; z < modal.length; z++) {
+    
     function openModal() {
+        console.log(z)
+        switch (z) {
+        case 0:
         console.log('we openin')
-        modal.classList.add('modalmodal')
-    }
+        modal[0].classList.add('modalmodal')
+
+        break;
+        case 1:
+            console.log("bras")
+            modal[1].classList.add('modalmodal')
+        break;
+            }
+        }
+    
+    
+    
+    
     function closeModal() {
         console.log('we closin')
-        modal.classList.remove('modalmodal')
+        modal[z].classList.remove('modalmodal')
     }
     window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.classList.remove('modalmodal')
+        if (event.target == modal[z]) {
+            modal[z].classList.remove('modalmodal')
         }
     }
+
+
+    card1.addEventListener('click', openModal)
+    card2.addEventListener('click', openModal)
+    closer.addEventListener('click', closeModal)
+    } */
+
+    /*let modal = document.querySelectorAll(".modal");
+let card1 = document.querySelector(".open1");
+let card2 = document.querySelector('.open2')
+let closer = document.querySelector(".close");
+let cards = document.querySelectorAll('.card');
+
+function openModal(z) {
+  switch (z) {
+    case 0:
+      modal[0].classList.add('modalmodal')
+      break;
+    case 1:
+      modal[1].classList.add('modalmodal')
+      break;
+  }
+}
+
+function closeModal(z) {
+  modal[z].classList.remove('modalmodal')
+}
+
+for (let z = 0; z < modal.length; z++) {
+    
+  cards[z].addEventListener('click', function() {
+    console.log(z)
+    openModal(z);
+  });
+  
+  closer.addEventListener('click', function(event) {
+    closeModal(z);
+  });
+}*/
+
+let modal = document.querySelectorAll(".modal");
+let card1 = document.querySelector(".open1");
+let card2 = document.querySelector('.open2');
+let cards = document.querySelectorAll('.card');
+
+function openModal(z) {
+  switch (z) {
+    case 0:
+      modal[0].classList.add('modalmodal')
+      break;
+    case 1:
+      modal[1].classList.add('modalmodal')
+      break;
+  }
+}
+
+function closeModal(z) {
+  modal[z].classList.remove('modalmodal')
+}
+
+cards[0].addEventListener('click', function() {
+  openModal(0);
+});
+
+cards[1].addEventListener('click', function() {
+  openModal(1);
+});
+
+modal[0].querySelector('.close').addEventListener('click', function() {
+  closeModal(0);
+});
+
+modal[1].querySelector('.close').addEventListener('click', function() {
+  closeModal(1);
+});
