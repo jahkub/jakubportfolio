@@ -43,6 +43,7 @@ function invisNav(width) {
     }
 }
 
+/*SLIDESHOW 1*/
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -66,6 +67,55 @@ function showSlides(n) {
     slides[slideIndex-1].style.display = "block";  
     }
 
+
+    /*SLIDESHOW 2*/
+    let slideIndex2 = 1;
+showSlides2(slideIndex2);
+
+function plusSlides2(n) {
+    showSlides2(slideIndex2 += n);
+}
+
+function currentSlide2(n) {
+    showSlides2(slideIndex2 = n);
+}
+
+function showSlides2(n) {
+    let i;
+    let slides = document.getElementsByClassName("slide2");
+    if (n > slides.length) {slideIndex2 = 1}    
+    if (n < 1) {slideIndex2 = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+
+    slides[slideIndex2-1].style.display = "block";  
+}
+
+
+    /*SLIDESHOW 3*/
+    let slide3Index = 1;
+    showSlides3(slide3Index);
+    
+    function plusSlides3(n) {
+        showSlides3(slide3Index += n);
+    }
+    
+    function currentSlide3(n) {
+        showSlides3(slide3Index = n);
+    }
+    
+    function showSlides3(n) {
+        let i;
+        let slides = document.getElementsByClassName("slide3");
+        if (n > slides.length) {slide3Index = 1}    
+        if (n < 1) {slide3Index = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+    
+        slides[slide3Index-1].style.display = "block";  
+    }
 
     /*let modal = document.querySelectorAll(".modal");
     let card1 = document.querySelector(".open1");
@@ -158,6 +208,9 @@ function openModal(z) {
     case 1:
       modal[1].classList.add('modalmodal')
       break;
+    case 2:
+      modal[2].classList.add('modalmodal')
+    break;
   }
 }
 
@@ -173,10 +226,19 @@ cards[1].addEventListener('click', function() {
   openModal(1);
 });
 
+cards[2].addEventListener('click', function() {
+  openModal(2);
+});
+
+
 modal[0].querySelector('.close').addEventListener('click', function() {
   closeModal(0);
 });
 
 modal[1].querySelector('.close').addEventListener('click', function() {
   closeModal(1);
+});
+
+modal[2].querySelector('.close').addEventListener('click', function() {
+  closeModal(2);
 });
