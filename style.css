@@ -76,7 +76,7 @@ body {
     top:0;
 }
 
-.intro {
+#intro {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,7 +125,7 @@ h2 {
     padding: 2rem;
 }
 
-.projects {
+.bigtext {
     position: relative;
     top: -3rem;
 }
@@ -199,6 +199,11 @@ h2 {
     flex-direction: row;
     width: 100vw;
     flex-wrap: wrap;
+}
+
+.cvh3 {
+    color: rgb(20, 20, 20);
+    
 }
 
 .column {
@@ -287,6 +292,9 @@ p {
 }
 .slideimg {
     max-height: 60vh;
+}
+.svg {
+    height: 60vh;
 }
 .prev, .next {
     cursor: pointer;
