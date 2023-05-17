@@ -117,6 +117,30 @@ function showSlides2(n) {
         slides[slide3Index-1].style.display = "block";  
     }
 
+    /*SLIDESHOW 4*/
+    let slide4Index = 1;
+    showSlides4(slide4Index);
+    
+    function plusSlides4(n) {
+        showSlides4(slide4Index += n);
+    }
+    
+    function currentSlide4(n) {
+        showSlides4(slide4Index = n);
+    }
+    
+    function showSlides4(n) {
+        let i;
+        let slides = document.getElementsByClassName("slide4");
+        if (n > slides.length) {slide4Index = 1}    
+        if (n < 1) {slide4Index = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+    
+        slides[slide4Index-1].style.display = "block";  
+    }
+
 let modal = document.querySelectorAll(".modal");
 let card1 = document.querySelector(".open1");
 let card2 = document.querySelector('.open2');
@@ -132,6 +156,9 @@ function openModal(z) {
       break;
     case 2:
       modal[2].classList.add('modalmodal')
+    break;
+    case 3:
+      modal[3].classList.add('modalmodal')
     break;
   }
 }
@@ -152,6 +179,10 @@ cards[2].addEventListener('click', function() {
   openModal(2);
 });
 
+cards[3].addEventListener('click', function() {
+  openModal(3);
+});
+
 
 modal[0].querySelector('.close').addEventListener('click', function() {
   closeModal(0);
@@ -164,3 +195,8 @@ modal[1].querySelector('.close').addEventListener('click', function() {
 modal[2].querySelector('.close').addEventListener('click', function() {
   closeModal(2);
 });
+
+modal[3].querySelector('.close').addEventListener('click', function() {
+  closeModal(3);
+});
+
