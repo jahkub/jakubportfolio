@@ -268,8 +268,10 @@ p {
 }
 
 .modalinfo {
-    padding: 20px;
-    padding-top: 40px;
+    padding: 60px;
+    padding-top: 80px;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 40vh;
 }
 
 .close {
@@ -318,7 +320,7 @@ p {
     width: auto;
     margin-top: -22px;
     padding: 16px;
-    color: rgb(50, 42, 58);
+    color: (beige);
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
