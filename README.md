@@ -53,3 +53,16 @@ Portfolion kommer innehålla mina senaste skolarbeten som jag är nöjd med men 
 #### vecka 19
 
 - Redovisning
+
+### TESTER
+##### browser, problem
+
+#### Dator:
+Opera, inga problem ✅
+Chrome, inga problem ✅
+Safari, inga problem ✅
+Microsoft Edge, SVG loadar inte in korrekt 
+
+#### Mobil, Iphone 13:
+Chrome, inga problem ✅
+Safari, inga problem ✅
