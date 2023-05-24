@@ -18,7 +18,6 @@ function burgerOpen() {
 
 window.onscroll = function() {invisNav(width)}
 
-
 var width = window.matchMedia("(min-width: 768px)")
 function invisNav(width) {
     if (width.matches) {
@@ -141,11 +140,37 @@ function showSlides2(n) {
         slides[slide4Index-1].style.display = "block";  
     }
 
+        /*SLIDESHOW 5*/
+        let slide5Index = 1;
+        showSlides5(slide5Index);
+        
+        function plusSlides5(n) {
+            showSlides5(slide5Index += n);
+        }
+        
+        function currentSlide5(n) {
+            showSlides5(slide5Index = n);
+        }
+        
+        function showSlides5(n) {
+            let i;
+            let slides = document.getElementsByClassName("slide5");
+            if (n > slides.length) {slide5Index = 1}
+            if (n < 1) {slide5Index = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+        
+            slides[slide5Index-1].style.display = "block";  
+        }
+
 let modal = document.querySelectorAll(".modal");
 let card1 = document.querySelector(".open1");
 let card2 = document.querySelector('.open2');
 let cards = document.querySelectorAll('.card');
 
+
+        /*För att öppna modals*/
 function openModal(z) {
   switch (z) {
     case 0:
@@ -159,6 +184,9 @@ function openModal(z) {
     break;
     case 3:
       modal[3].classList.add('modalmodal')
+    break;
+    case 4:
+      modal[4].classList.add('modalmodal')
     break;
   }
 }
@@ -183,6 +211,10 @@ cards[3].addEventListener('click', function() {
   openModal(3);
 });
 
+cards[4].addEventListener('click', function() {
+  openModal(4);
+});
+
 
 modal[0].querySelector('.close').addEventListener('click', function() {
   closeModal(0);
@@ -198,5 +230,9 @@ modal[2].querySelector('.close').addEventListener('click', function() {
 
 modal[3].querySelector('.close').addEventListener('click', function() {
   closeModal(3);
+});
+
+modal[4].querySelector('.close').addEventListener('click', function() {
+  closeModal(4);
 });
 
