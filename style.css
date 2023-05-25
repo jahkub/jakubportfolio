@@ -88,6 +88,16 @@ body {
     height: 40%;
 }
 
+.arrowposition {
+    position: absolute;
+    bottom: 20px;
+}
+.arrow {
+    height: 60px;
+    width: auto;
+
+}
+
 .name {
     position: absolute;
     top:45vh;
@@ -106,7 +116,7 @@ h1 {
 
 h2 {
     font-family: "eckmannpsych-small", sans-serif;
-    color: rgb(40, 44, 39);
+    color: rgb(58, 58, 58);
 }
 h3 {
     font-family: "eckmannpsych-small", sans-serif;
